@@ -11,9 +11,9 @@ import com.example.myapplication.R
 class NewsAdapter(private val newsList: ArrayList<News>) :
     RecyclerView.Adapter<NewsAdapter.NewsHolder>() {
 
-    private lateinit var mListener: onItemClickListener
+    private lateinit var mListener: OnItemClickListener
 
-    interface onItemClickListener{
+    interface OnItemClickListener{
         fun onItemClick(position: Int)
     }
 
@@ -24,7 +24,7 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
         return NewsHolder(itemView, mListener)
     }
 
-    fun setOnItemClickListener(listener: onItemClickListener){
+    fun setOnItemClickListener(listener: OnItemClickListener){
         mListener = listener
     }
 
@@ -39,7 +39,7 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
 
     }
 
-    class NewsHolder(newsItem: View, listener: onItemClickListener) : RecyclerView.ViewHolder(newsItem) {
+    class NewsHolder(newsItem: View, listener: OnItemClickListener) : RecyclerView.ViewHolder(newsItem) {
         val tvFrom : TextView = itemView.findViewById(R.id.tv_from)
         val tvTitle : TextView = itemView.findViewById(R.id.tv_title)
 

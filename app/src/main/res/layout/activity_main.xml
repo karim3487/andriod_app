@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="Logo" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,13 +50,14 @@
             android:layout_height="50dp"
             android:background="@drawable/edittext_background"
             android:ems="10"
-            android:hint="ЛОГИН"
+            android:hint="@string/login"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:autofillHints="username" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -64,13 +66,14 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/edittext_background"
             android:ems="10"
-            android:hint="ПАРОЛЬ"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:autofillHints="password" />
 
         <Button
             android:id="@+id/b_singIn"
@@ -79,7 +82,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/orange_button"
-            android:text="ВОЙТИ"
+            android:text="@string/sign_in"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="15sp"
