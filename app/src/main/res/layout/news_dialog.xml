@@ -11,8 +11,7 @@
         android:layout_height="match_parent"
         android:background="#00FFFFFF"
         android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:padding="30dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/tv_from"
@@ -61,7 +60,7 @@ Nam faucibus, neque sit amet lacinia elementum, lorem risus dapibus diam, et ali
             android:id="@+id/b_ok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/orange_button"
             android:text="@string/ok" />
 
