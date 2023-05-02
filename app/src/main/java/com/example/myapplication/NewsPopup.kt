@@ -14,13 +14,6 @@ class NewsPopup(
     private val title: String,
     private val description: String
 ) : DialogFragment() {
-//        override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
-//        AlertDialog.Builder(requireContext())
-//            .setTitle(title)
-//            .setMessage(description)
-//            .setPositiveButton(getString(R.string.ok)) { _, _ -> }
-//            .create()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,9 +25,9 @@ class NewsPopup(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val tvFrom : TextView = view.findViewById(R.id.tv_from)
-        val tvTitle : TextView = view.findViewById(R.id.tv_title)
-        val tvDescription : TextView = view.findViewById(R.id.tv_description)
+        val tvFrom: TextView = view.findViewById(R.id.tv_from)
+        val tvTitle: TextView = view.findViewById(R.id.tv_title)
+        val tvDescription: TextView = view.findViewById(R.id.tv_description)
         tvFrom.text = from
         tvTitle.text = title
         tvDescription.text = description

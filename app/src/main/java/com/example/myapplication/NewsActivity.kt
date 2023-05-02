@@ -1,10 +1,21 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.content.ContextCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.adapters.NewsAdapter
+import com.google.android.material.navigation.NavigationView
 
 class NewsActivity : AppCompatActivity() {
 
@@ -12,10 +23,31 @@ class NewsActivity : AppCompatActivity() {
     private lateinit var newArrayList: ArrayList<News>
     private lateinit var from: Array<String>
     private lateinit var title: Array<String>
+    private lateinit var toogle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
+
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+
+        toogle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toogle)
+        toogle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Новости"
+
+
+        navView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_books -> Toast.makeText(applicationContext, "books", Toast.LENGTH_SHORT)
+                    .show()
+            }
+            true
+        }
+
 
         from = arrayOf(
             "Логунова Т.В",
@@ -49,6 +81,22 @@ class NewsActivity : AppCompatActivity() {
 
         newArrayList = arrayListOf()
         getUserData()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toogle.onOptionsItemSelected(item)) {
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.nav_menu, menu)
+        val menuView: View? = findViewById(R.id.nav_view)
+        menuView?.setBackgroundColor(ContextCompat.getColor(this, R.color.orange))
+
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun getUserData() {

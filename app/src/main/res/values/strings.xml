@@ -4,4 +4,8 @@
     <string name="login">ЛОГИН</string>
     <string name="password">ПАРОЛЬ</string>
     <string name="sign_in">ВОЙТИ</string>
+    <string name="demo_name">Екатерина Иванова</string>
+    <string name="demo_role">Студент</string>
+    <string name="close">Закрыть</string>
+    <string name="open">Открыть</string>
 </resources>

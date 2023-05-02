@@ -1,62 +1,73 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="305dp"
     android:layout_height="500dp"
-    android:maxHeight="500dp"
-    android:background="@drawable/dialog_background"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
-    android:padding="30dp">
+    app:cardCornerRadius="30dp">
 
-    <TextView
-        android:id="@+id/tv_from"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:text="Логунова Т.В" />
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ellipsize="end"
-        android:maxLines="4"
-        android:textSize="15sp"
-        tools:text="Группе И591Б подойти в 259 аудиторию на консультацию" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scrollbars="none">
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="30dp">
 
         <TextView
-            android:id="@+id/tv_description"
+            android:id="@+id/tv_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Логунова Т.В" />
+
+        <TextView
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:scrollbars="vertical"
-            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:maxLines="4"
             android:textSize="15sp"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nibh aliquet urna pulvinar fringilla. In hac habitasse platea dictumst. Curabitur id faucibus lorem. Nullam elementum ac nulla in convallis. Morbi ultricies mi nunc, quis sodales risus interdum at. Quisque ullamcorper fringilla rhoncus. Integer in vulputate magna. Aenean mattis ac enim vel maximus. Nam in suscipit tortor. Vestibulum sit amet elit id magna volutpat rhoncus sed at mi. Nam venenatis luctus lacus, auctor egestas dolor molestie a. In mattis pharetra dui id lacinia. Aenean lobortis mauris et justo facilisis tempor. Proin vitae tempor elit, sed malesuada justo. Etiam diam tellus, porttitor vitae tincidunt nec, facilisis id tortor.
+            tools:text="Группе И591Б подойти в 259 аудиторию на консультацию" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae nibh aliquet urna pulvinar fringilla. In hac habitasse platea dictumst. Curabitur id faucibus lorem. Nullam elementum ac nulla in convallis. Morbi ultricies mi nunc, quis sodales risus interdum at. Quisque ullamcorper fringilla rhoncus. Integer in vulputate magna. Aenean mattis ac enim vel maximus. Nam in suscipit tortor. Vestibulum sit amet elit id magna volutpat rhoncus sed at mi. Nam venenatis luctus lacus, auctor egestas dolor molestie a. In mattis pharetra dui id lacinia. Aenean lobortis mauris et justo facilisis tempor. Proin vitae tempor elit, sed malesuada justo. Etiam diam tellus, porttitor vitae tincidunt nec, facilisis id tortor.
 
 Nam faucibus, neque sit amet lacinia elementum, lorem risus dapibus diam, et aliquam mi turpis id tortor. Pellentesque pellentesque felis viverra lorem facilisis, eu dignissim diam pulvinar. Sed vel massa id diam vehicula semper at rhoncus dui. Donec nulla nunc, posuere et velit non, dapibus tempus urna. Aliquam felis ipsum, porttitor a lobortis vel, vestibulum sit amet orci. Morbi sem mi, facilisis vitae convallis sit amet, imperdiet vel velit. Phasellus scelerisque purus lorem, aliquet gravida metus tempor non.
 " />
 
-    </ScrollView>
+        </ScrollView>
 
-    <Button
-        android:id="@+id/b_ok"
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/orange_button"
-        android:text="@string/ok" />
+        <Button
+            android:id="@+id/b_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/orange_button"
+            android:text="@string/ok" />
 
-</LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
